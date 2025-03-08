@@ -1,0 +1,168 @@
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main container styling */
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Header styling */
+h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Balance display */
+.balance {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.balance label {
+    font-weight: bold;
+}
+
+/* Deposit Section */
+.deposit {
+    margin-bottom: 25px;
+}
+
+.deposit input {
+    padding: 10px;
+    width: 160px;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.deposit button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deposit button:hover {
+    background-color: #45a049;
+}
+
+/* Bet Section */
+.bet-section {
+    margin-bottom: 25px;
+}
+
+.bet-section input {
+    padding: 10px;
+    width: 100px;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.bet-section button {
+    padding: 12px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bet-section button:hover {
+    background-color: #f44336;
+}
+
+/* Slot machine grid layout */
+.slot-machine {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Row styling for the slot machine */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 70px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    color: #555;
+    transition: transform 0.3s ease-in-out;
+}
+
+.row:hover {
+    transform: scale(1.1);
+    background-color: #d3d3d3;
+}
+
+/* Result text */
+#result {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+/* Play again text */
+#playAgain {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #ff5722;
+}
+
+/* Disable button styles */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Additional responsive styling */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .deposit input, .bet-section input {
+        width: 120px;
+    }
+}
