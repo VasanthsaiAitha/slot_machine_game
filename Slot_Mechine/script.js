@@ -1,5 +1,5 @@
 const SYMBOLS_COUNT = { "A": 2, "B": 4, "C": 3, "D": 8 };
-const SYMBOLS_Value = { "A": 5, "B": 2, "C": 7, "D": 4 };
+const SYMBOLS_VALUE = { "A": 5, "B": 2, "C": 7, "D": 4 };
 
 let balance = 0;
 
@@ -11,6 +11,7 @@ const linesInput = document.getElementById("lines");
 const betAmountInput = document.getElementById("betAmount");
 const resultDisplay = document.getElementById("result");
 const playAgainDisplay = document.getElementById("playAgain");
+const resetButton = document.getElementById("resetButton");
 const rows = [document.getElementById("row1"), document.getElementById("row2"), document.getElementById("row3")];
 
 const deposit = () => {
@@ -74,7 +75,7 @@ const getWinnings = (rowsData, bet, lines) => {
             }
         }
         if (allSame) {
-            winnings += bet * SYMBOLS_Value[symbols[0]];
+            winnings += bet * SYMBOLS_VALUE[symbols[0]];
         }
     }
     return winnings;
@@ -110,3 +111,22 @@ spinButton.addEventListener("click", () => {
 });
 
 depositButton.addEventListener("click", deposit);
+
+const resetGame = () => {
+    balance = 0;
+    balanceDisplay.textContent = "$" + balance;
+    depositAmountInput.value = "";
+    depositAmountInput.disabled = false;
+    depositButton.disabled = false;
+    spinButton.disabled = false;
+    betAmountInput.value = "";
+    linesInput.value = 1;
+    resultDisplay.textContent = "";
+    playAgainDisplay.textContent = "";
+
+    rows.forEach(row => row.textContent = "");
+
+    alert("Game has been reset!");
+};
+
+resetButton.addEventListener("click", resetGame);
